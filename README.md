@@ -1,64 +1,62 @@
-# Gestion de Locations d'Appartements
+# Apartment Rental Management
 
-Ce projet est une application de gestion des locations d'appartements, conçue pour simplifier le processus de gestion des propriétés locatives.
+This project is an apartment rental management application designed to simplify the process of managing rental properties.
 
 ## Installation
 
-Avant de commencer, assurez-vous d'avoir Docker installé sur votre système. Vous pouvez trouver des instructions d'installation pour Docker [ici](https://docs.docker.com/get-docker/).
+Before getting started, make sure you have Docker installed on your system. You can find installation instructions for Docker [here](https://docs.docker.com/get-docker/).
 
-1. Clonez ce dépôt sur votre machine :
+1. Clone this repository to your machine:
 
     ```
     git clone https://github.com/Yoploo/MAYOLUL.git
     ```
 
-2. Accédez au répertoire du projet :
+2. Navigate to the project directory:
 
     ```
     cd MAYOLUL
     ```
 
-3. Créez et démarrez les conteneurs Docker à l'aide de Docker Compose :
+3. Build and start Docker containers using Docker Compose:
 
     ```
     docker-compose up -d
     ```
 
-Ces commandes construiront et démarreront les conteneurs Docker pour l'application et la base de données PostgreSQL.
+These commands will build and start Docker containers for the application and PostgreSQL database.
 
-## Utilisation
+## Usage
 
-### Gestion des utilisateurs
-- **Enregistrement d'un utilisateur :** `POST /register`
-- **Connexion d'un utilisateur :** `POST /login`
-- **Suppression d'un utilisateur :** `DELETE /user/{userId}`
-- **Modification d'un utilisateur :** `PATCH /user/{userId}`
-- **Récupération de tous les utilisateurs :** `GET /user`
+### User Management
+- **User Registration:** `POST http://localhost:8081/register`
+- **User Login:** `POST http://localhost:8081/login`
+- **Delete User:** `DELETE http://localhost:8081/user/{userId}`
+- **Modify User:** `PATCH http://localhost:8081/user/{userId}`
+- **Get All Users:** `GET http://localhost:8081/user`
 
-### Gestion des appartements
-- **Ajout d'un appartement :** `POST /apartments`
-- **Suppression d'un appartement :** `DELETE /apartment/{apartmentId}`
-- **Modification d'un appartement :** `PATCH /apartment/{apartmentId}`
-- **Récupération de tous les appartements :** `GET /apartments`
-- **Récupération d'un appartement par ID :** `GET /apartment/{apartmentId}`
-- **Modification de la disponibilité d'un appartement :** `PATCH /apartment/dispo/{apartmentId}`
+### Apartment Management
+- **Add Apartment:** `POST http://localhost:8081/apartments`
+- **Delete Apartment:** `DELETE http://localhost:8081/apartment/{apartmentId}`
+- **Modify Apartment:** `PATCH http://localhost:8081/apartment/{apartmentId}`
+- **Get All Apartments:** `GET http://localhost:8081/apartments`
+- **Get Apartment by ID:** `GET http://localhost:8081/apartment/{apartmentId}`
+- **Modify Apartment Availability:** `PATCH http://localhost:8081/apartment/dispo/{apartmentId}`
 
-### Gestion des réservations
-- **Ajout d'une réservation pour un appartement :** `POST /apartment/{apartmentId}`
-- **Suppression d'une réservation :** `DELETE /booking/{bookingId}`
-- **Récupération d'une réservation par ID :** `GET /booking/{bookingId}`
-- **Récupération de toutes les réservations :** `GET /bookings`
-- **Récupération des réservations pour un appartement :** `GET /apartbookings/{apartmentId}`
-- **Modification d'une réservation :** `PATCH /booking/{bookingId}`
+### Reservation Management
+- **Add Reservation for Apartment:** `POST http://localhost:8081/apartment/{apartmentId}`
+- **Delete Reservation:** `DELETE http://localhost:8081/booking/{bookingId}`
+- **Get Reservation by ID:** `GET http://localhost:8081/booking/{bookingId}`
+- **Get All Reservations:** `GET http://localhost:8081/bookings`
+- **Get Reservations for Apartment:** `GET http://localhost:8081/apartbookings/{apartmentId}`
+- **Modify Reservation:** `PATCH http://localhost:8081/booking/{bookingId}`
 
-Pour effectuer ces requêtes, vous pouvez utiliser des outils tels que [Insomnia](https://insomnia.rest/) ou [Postman](https://www.postman.com/). Ces outils vous permettent de tester facilement votre API en envoyant des requêtes HTTP à vos endpoints et en visualisant les réponses. Ils offrent également des fonctionnalités avancées telles que la gestion des environnements, l'exportation de collections de requêtes, etc.
-
-
+To perform these requests, you can use tools such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/). These tools allow you to easily test your API by sending HTTP requests to your endpoints and visualizing the responses. They also offer advanced features such as environment management, request collection export, etc.
 
 ## Contributions
 
-Les contributions à ce projet sont les bienvenues ! Si vous souhaitez contribuer, veuillez soumettre une pull request avec vos modifications.
+Contributions to this project are welcome! If you would like to contribute, please submit a pull request with your changes.
 
-## Licence
+## License
 
-Ce projet est sous licence [MIT](LICENSE).
+This project is licensed under the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://www.gnu.org/licenses/gpl-3.0.en.html).
