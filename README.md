@@ -1,35 +1,64 @@
-# RestAPI_project
+# Gestion de Locations d'Appartements
 
-RestAPI is an API to manage rental apartment.
+Ce projet est une application de gestion des locations d'appartements, conçue pour simplifier le processus de gestion des propriétés locatives.
 
-## Table des matières
+## Installation
 
-1. [Installation](#installation)
-2. [Utilisation](#utilisation)
-3. [Endpoints](#endpoints)
-4. [Contribuer](#contribuer)
-5. [Licence](#licence)
+Avant de commencer, assurez-vous d'avoir Docker installé sur votre système. Vous pouvez trouver des instructions d'installation pour Docker [ici](https://docs.docker.com/get-docker/).
 
-## Installation avec Docker Compose
+1. Clonez ce dépôt sur votre machine :
 
-Si vous préférez utiliser Docker Compose pour gérer les conteneurs nécessaires à votre projet, suivez ces étapes :
+    ```
+    git clone https://github.com/Yoploo/MAYOLUL.git
+    ```
 
-1. Clonez ce référentiel sur votre machine locale :
+2. Accédez au répertoire du projet :
 
-```bash
-$ git clone https://github.com/votre-utilisateur/votre-projet.git
+    ```
+    cd MAYOLUL
+    ```
+
+3. Créez et démarrez les conteneurs Docker à l'aide de Docker Compose :
+
+    ```
+    docker-compose up -d
+    ```
+
+Ces commandes construiront et démarreront les conteneurs Docker pour l'application et la base de données PostgreSQL.
+
+## Utilisation
+
+### Gestion des utilisateurs
+- **Enregistrement d'un utilisateur :** `POST /register`
+- **Connexion d'un utilisateur :** `POST /login`
+- **Suppression d'un utilisateur :** `DELETE /user/{userId}`
+- **Modification d'un utilisateur :** `PATCH /user/{userId}`
+- **Récupération de tous les utilisateurs :** `GET /user`
+
+### Gestion des appartements
+- **Ajout d'un appartement :** `POST /apartments`
+- **Suppression d'un appartement :** `DELETE /apartment/{apartmentId}`
+- **Modification d'un appartement :** `PATCH /apartment/{apartmentId}`
+- **Récupération de tous les appartements :** `GET /apartments`
+- **Récupération d'un appartement par ID :** `GET /apartment/{apartmentId}`
+- **Modification de la disponibilité d'un appartement :** `PATCH /apartment/dispo/{apartmentId}`
+
+### Gestion des réservations
+- **Ajout d'une réservation pour un appartement :** `POST /apartment/{apartmentId}`
+- **Suppression d'une réservation :** `DELETE /booking/{bookingId}`
+- **Récupération d'une réservation par ID :** `GET /booking/{bookingId}`
+- **Récupération de toutes les réservations :** `GET /bookings`
+- **Récupération des réservations pour un appartement :** `GET /apartbookings/{apartmentId}`
+- **Modification d'une réservation :** `PATCH /booking/{bookingId}`
+
+Pour effectuer ces requêtes, vous pouvez utiliser des outils tels que [Insomnia](https://insomnia.rest/) ou [Postman](https://www.postman.com/). Ces outils vous permettent de tester facilement votre API en envoyant des requêtes HTTP à vos endpoints et en visualisant les réponses. Ils offrent également des fonctionnalités avancées telles que la gestion des environnements, l'exportation de collections de requêtes, etc.
 
 
-## How to contribute
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
+## Contributions
 
-Please make sure to update tests as appropriate.
+Les contributions à ce projet sont les bienvenues ! Si vous souhaitez contribuer, veuillez soumettre une pull request avec vos modifications.
 
+## Licence
 
-```bash
-pip install foobar
-```
-
-
+Ce projet est sous licence [MIT](LICENSE).
