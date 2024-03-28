@@ -53,6 +53,11 @@ These commands will build and start Docker containers for the application and Po
 
 To perform these requests, you can use tools such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/). These tools allow you to easily test your API by sending HTTP requests to your endpoints and visualizing the responses. They also offer advanced features such as environment management, request collection export, etc.
 
+### Import Requests
+
+You can import the example request file `request-example.json` into Insomnia. This file contains all the requests for your convenience.
+
+
 ## Contributions
 
 Contributions to this project are welcome! If you would like to contribute, please submit a pull request with your changes.
