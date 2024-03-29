@@ -62,7 +62,7 @@ You can import the example request file `request-example.json` into Insomnia. Th
 
 ## Contributions
 
-Contributions to this project are welcome! If you would like to contribute, please follow the contribution guidelines [Contribution Guidelines](CONTRIBUTION.md)
+Contributions to this project are welcome! If you would like to contribute, please follow the contribution guidelines [Contribution Guidelines](CONTRIBUTING.md)
 
 ## License
 
