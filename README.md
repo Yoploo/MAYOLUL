@@ -12,6 +12,9 @@
 
 This project is an apartment rental management application designed to simplify the process of managing rental properties.
 
+
+You can follow the advencement of the project on the [CHANGELOG](CHANGELOG.md).
+
 ## Installation
 
 Before getting started, make sure you have Docker installed on your system. You can find installation instructions for Docker [here](https://docs.docker.com/get-docker/).
