@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0
+## 0.2.0
 
 ### Added
 - Initial release of the Apartment Rental Management application.
