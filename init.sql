@@ -5,7 +5,8 @@ CREATE TABLE "user"
     password VARCHAR(255),
     token TEXT,
     accountType VARCHAR(1),
-    PRIMARY KEY (id)
+    PRIMARY KEY (id) 
+    
 );
 
 CREATE TABLE apartment
