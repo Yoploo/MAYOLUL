@@ -3,7 +3,7 @@
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Version](https://img.shields.io/badge/version-1.0-blue)](your-version-link)
+[![Version](https://img.shields.io/badge/version-1.0-blue)](https://github.com/Yoploo/MAYOLUL/milestones)
 [![PHP Version](https://img.shields.io/badge/PHP-7.4-blue)](your-php-version-link)
 
 
